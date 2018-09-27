@@ -28,10 +28,10 @@ int main()
 
       if (input == 'a' || input == 'A')
       {
+         cout<<"What is the item?"<<endl;
+         cin>>item;
          if (numItems < 5)
              {   
-                 cout<<"What is the item?"<<endl;
-                 cin>>item;
                  list[numItems] = item;
                  numItems++;
              }
