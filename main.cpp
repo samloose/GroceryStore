@@ -25,7 +25,7 @@ int main()
       quit = input == 'q' || input == 'Q' || input == 'a' || input == 'A';
       }
       while(!quit);
-
+      
       if (input == 'a' || input == 'A')
       {
          cout<<"What is the item?"<<endl;
@@ -39,9 +39,19 @@ int main()
              {
                  cout<<"You'll need a bigger list!"<<endl;
              }
-      }
+      }   
+
+      if (input == 'q' || input == 'Q')
+         {
+         cout<<"==ITEMS TO BUY=="<<endl;
+         numItems = 0;
+         for(numItems=0; numItems< 5; numItems++)
+           {                   
+              cout<<numItems + 1<<" "<<list[numItems]<<endl;
+           }
+         }
       quit2 = input == 'q' || input == 'Q';
   }    
   while(!quit2);
-return 0;
+  return 0;
 }
