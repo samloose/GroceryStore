@@ -8,6 +8,7 @@ int main()
 {
   vector<string> list;
   int numItems = 0;
+  int index = 0;
   char input;
   string item;
   bool quit = false;
@@ -40,10 +41,10 @@ int main()
         if (numItems > 0)
         {
             cout<<"==ITEMS TO BUY=="<<endl;
-            numItems = 0;
-            for(numItems=0; numItems< 5; numItems++)
+            index = 0;
+            for(index=0; index < numItems ; index++)
             {                   
-               cout<<numItems + 1<<" "<<list[numItems]<<endl;
+               cout<<index + 1<<" "<<list[index]<<endl;
             }
         }
         else
