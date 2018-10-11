@@ -50,7 +50,7 @@ int main()
       if (input == 'd' || input == 'D' && numItems > 0)
       {
         //trash = list[numItems-1];
-        cout<< list[list.size()-1] <<" was deleted from the list"<<endl;
+        cout<< list[list.size()-1] <<" was deleted from the list."<<endl;
         list.pop_back();
         numItems--;
       }
