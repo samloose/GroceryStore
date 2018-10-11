@@ -31,7 +31,7 @@ int main()
       cout<<"\nYour choice (A/Q): ";
       //if(input == 'd' || input == 'D')
       //{
-      //  cout<< list[numItems] <<" was deleted from the list"<<endl;
+      //  cout<< list[numItems] <<" was deleted from the list."<<endl;
       //}
       repeat = true;
       cin>>input;
