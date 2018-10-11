@@ -11,8 +11,10 @@ int main()
   int index = 0;
   char input;
   string item;
+  string trash;
   bool quit = false;
   bool quit2 = false;
+  bool repeat = false;
 
   do
   {
@@ -21,10 +23,19 @@ int main()
       cout<<"\n==GROCERY LIST MANAGER==";
       cout<<"\nEnter your choice: ";
       cout<<"\n (A)dd an item";
+      if(numItems > 0)
+      {        
+        cout<<"\n (D)elete lasts item";
+      }
       cout<<"\n (Q)uit";
       cout<<"\nYour choice (A/Q): ";
+      //if(input == 'd' || input == 'D')
+      //{
+      //  cout<< list[numItems] <<" was deleted from the list"<<endl;
+      //}
+      repeat = true;
       cin>>input;
-      quit = input == 'q' || input == 'Q' || input == 'a' || input == 'A';
+      quit = input == 'q' || input == 'Q' || input == 'a' || input == 'A' || input == 'd' || input == 'd';
       }
       while(!quit);
       
@@ -36,6 +47,13 @@ int main()
          numItems++;
       }   
 
+      if (input == 'd' || input == 'D' && numItems > 0)
+      {
+        //trash = list[numItems-1];
+        cout<< list[list.size()-1] <<" was deleted from the list"<<endl;
+        list.pop_back();
+        numItems--;
+      }
       if (input == 'q' || input == 'Q')
       {
         if (numItems > 0)
